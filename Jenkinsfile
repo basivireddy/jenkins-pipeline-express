@@ -23,11 +23,11 @@ node{
     }
 
     	stage('Docker Build and Publish') {
-		buildAndPush('basivireddy', "${env.JOB_NAME}", 'v1');
+		buildAndPush('basivireddy', "${env.JOB_NAME}", 'v1.0');
     }
 	
 	stage('Deploy to OpenShift') {
-		deployOpenShift('basivireddy', "${env.JOB_NAME}", 'v1', "${env.BUILD_NUMBER}", "piab-demo");
+		deployOpenShift('basivireddy', "${env.JOB_NAME}", 'v1.0', "${env.BUILD_NUMBER}", "piab-demo");
     }
 	
 	
