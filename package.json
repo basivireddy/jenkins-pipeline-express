@@ -6,7 +6,8 @@
   "scripts": {
     "pm2-start": "pm2 start -f index.js --name 'jenkins-pipeline-express'",
     "pm2-stop": "pm2 stop 'jenkins-pipeline-express'",
-    "test": "jest"
+    "test": "jest",
+    "start": "node index.js"
   },
   "jest": {
     "verbose": true,
